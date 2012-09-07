@@ -1,0 +1,63 @@
+
+<html>
+<head>
+<script type="text/javascript" src="jquery-1.7.1.js"></script> 
+        <script type="text/javascript"> 
+            $(function () { 
+                $("#btn1").click(function () { 
+          
+				//	$.getJSON("http://localhost:4374/channelhandler.ashx",{ type : "jsonp"}, function(data){
+				//		//$("#msg").text(data);
+				//		alert('1');
+				//	});
+		
+			/*			$.ajax({
+								  url: "http://vanclsearch.vjia.com/search.ashx?callback=?",
+								  data: { pcid : "5251"},
+								  success: function(data){
+														alert(data.responseHeader.params.echoParams);
+													},
+								  dataType: "jsonp"
+						});
+			*/
+			
+				
+					$.ajax({
+								  url: "http://localhost:4374/channelhandler.ashx?callback=?",
+								  data: { datatype : "jsonp"},
+								  success: function(data){
+								  //data = JSON.parse(data); 
+														alert(data[0].DemoLink);
+													},
+								 error: function(XMLHttpRequest ,errorstring,errorThrown){
+														alert(errorstring);
+														alert(errorThrown);
+													},
+								  dataType: "jsonp"
+						});
+			
+			
+			
+				}); 
+				         $("#btn2").click(function () { 
+						$.ajax({
+								  url: "http://vanclsearch.vjia.com/search.ashx?callback=?",
+								  data: { pcid : "5251"},
+								  success: function(data){
+											alert(data.responseHeader.params.echoParams);
+													},
+								  dataType: "jsonp"
+						});
+			
+
+				}); 
+			 });
+        </script> 
+</head>
+<body>
+        <input type="button" id="btn1" value="local" /> 
+		<input type="button" id="btn2" value="remote" /> 
+        <div id="msg" style=" width: 100px; height: 50px"> 
+        </div> 
+<body>
+</html>

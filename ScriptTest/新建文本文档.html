@@ -1,0 +1,64 @@
+<html>
+<head>
+<style>
+.divTable 
+{ 
+    display:  table; 
+    width:auto; 
+    background-color:#eee; 
+    border:1px solid  #666666; 
+    border-spacing:5px; 
+} 
+ 
+.divRow 
+{ 
+   display:table-row; 
+   width:auto; 
+ 
+} 
+ 
+.divCell 
+{ 
+    float:left; 
+    display:table-column; 
+    width:200px; 
+    background-color:#ccc; 
+ 
+}
+</style>
+<script type="text/javascript" src="jquery-1.7.1.js"></script> 
+<script>
+$("document").ready(function(){
+    $("#chk").click(function(){
+        $("input[type=text]").toggle(); 
+    })
+});
+
+</script>
+</head>
+<body>
+<input type="checkbox" id="chk" />Check it, if customer has no company. 
+<span>Paragraph 1st Lorem Ipsum  Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum </span> 
+        <div class="divTable"> 
+             <div class="headRow"> 
+                <div class="divCell" align="center">Company Name</div> 
+                <div  class="divCell">Customer Name</div> 
+                <div  class="divCell">Customer Address</div> 
+             </div> 
+            <div class="divRow"> 
+                <div class="divCell" align="center"><input type="text" /></div> 
+                <div class="divCell" align="center">Customer Name</div> 
+                <div class="divCell" align="center">Customer Address</div> 
+            </div> 
+            <div class="divRow"> 
+                <div class="divCell" align="center"><input type="text" /></div> 
+           </div> 
+            <div class="divRow"> 
+                <div class="divCell" align="center"><input type="text" /></div> 
+           </div> 
+      </div> 
+<p>Paragraph 2nd Lorem Ipsum  Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum </P> 
+</body>
+</html>
+
+
